@@ -25,7 +25,7 @@ found_devices = client.discover(timeout=5)
 print("found devices:", found_devices)
 client.connect("MicroBlocks QCQ", timeout=3)
 
-client.request("displayCharacter", ["f"])
+client.display_character("c")
 
 while True:
     position_x = client.position_x
