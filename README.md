@@ -49,6 +49,10 @@ for index, device in enumerate(devices):
     device.display_character(index)
 ```
 
+## demo
+
+ref: [notebooks](./notebooks)
+
 ## License
 
 `cocube` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
