@@ -56,3 +56,39 @@ class CoCube(MicroblocksClient):
 
     def move_to_target(self, x=10, y=10, speed=50):
         self.request("Move to Target X _ Y _ Speed _", [x, y, speed])
+
+    ###### module ########
+
+    def power_on_module(self):
+        self.request("Power on module", [])
+
+    def power_off_module(self):
+        self.request("Power off module", [])
+
+    def gripper_open(self):
+        self.request("Gripper Open", [])
+
+    def gripper_close(self):
+        self.request("Gripper Close", [])
+
+    def gripper_degree(self, degree):
+        # degree: -70-0
+        self.request("Gripper degree", [degree])
+
+    def attach_NeoPixel(self):
+        self.request("attach NeoPixel", [])
+
+    def set_all_NeoPixels_color(self, r, g, b):
+        color = r << 16 | g << 8 | b
+        self.request("set all NeoPixels color", [color])
+
+    def clear_NeoPixels(self):
+        self.request("clear NeoPixels", [])
+
+    @property
+    def ultrasonic_distance(self):
+        return self.request("Ultrasonic distance (cm)", [])
+
+    @property
+    def ambient_light(self):
+        return self.request("Ambient Light", [])
